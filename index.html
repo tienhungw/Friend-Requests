@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Nguyen Tien Hung</title>
+    <style>
+      
+    </style>
+  </head>
+  <body class = "flex justify-center items-center h-[100vh] m-0">
+    <div class="box0 flex flex-col h-[410px] w-[650px] border border-inherit rounded-sm gap-2">
+      <div class="box1 flex flex-row border-inherit rounded-sm justify-between h-[40px] mt-2 ml-1 mr-1">
+          <p class="text-2xl font-semibold text-gray-600">Friend Requests</p>
+          <box-icon class="cursor-pointer" name='dots-vertical-rounded' color='rgba(0,0,0,0.54)' ></box-icon>      
+      </div>
+
+      <div class="box2 flex flex-row rounded-sm gap-1 h-[300px] ml-1 mr-1 overflow-x-scroll whitespace-nowrap">
+        <div class="box4 flex flex-col border rounded-md rounded-t-[10px] border-gray-300 h-[280px] w-[155px]">
+            <img class="w-[155px] h-[155px] rounded-t-[10px]" src="src/avatar_1.jpg">
+            <p class="text-xl font-semibold mt-1 text-center">Trần Hà Linh</p>
+            <p class="mt-2 font-normal text-gray-500 text-center">25 mutual friends</p>
+            <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-blue-100 text-blue-700 cursor-pointer hover:bg-blue-200">Confirm</button>
+            <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-gray-100 cursor-pointer hover:bg-gray-300">Delete</button>
+        </div>
+
+        <div class="box4 flex flex-col border rounded-md  rounded-t-[10px] border-gray-300 h-[280px] w-[155px]">
+          <img class="w-[155px] h-[155px] rounded-t-[10px]" src="src/avatar_2.jpg">
+          <p class="text-xl font-semibold mt-1 text-center">Lê Bống</p>
+          <p class="mt-2 font-normal text-gray-500 text-center">20 mutual friends</p>
+          <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-blue-100 text-blue-700 cursor-pointer hover:bg-blue-200">Confirm</button>
+          <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-gray-100 cursor-pointer  hover:bg-gray-300">Delete</button>
+        </div>
+
+        <div class="box4 flex flex-col border rounded-md  rounded-t-[10px] border-gray-300 h-[280px] w-[155px]">
+          <img class="w-[155px] h-[155px] rounded-t-[10px]" src="src/avatar_3.jpg">
+          <p class="text-xl font-semibold mt-1 text-center">Quỳnh Alee</p>
+          <p class="mt-2 font-normal text-gray-500 text-center">15 mutual friends</p>
+          <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-blue-100 text-blue-700 cursor-pointer hover:bg-blue-200">Confirm</button>
+          <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-gray-100 cursor-pointer  hover:bg-gray-300">Delete</button>
+        </div>
+
+        <div class="box4 flex flex-col border rounded-md  rounded-t-[10px] border-gray-300 h-[280px] w-[155px]">
+          <img class="w-[155px] h-[155px] rounded-t-[10px]" src="src/avatar_4.jpg">
+          <p class="text-xl font-semibold mt-1 text-center">Gấm Kami</p>
+          <p class="mt-2 font-normal text-gray-500 text-center">10 mutual friends</p>
+          <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-blue-100 text-blue-700 cursor-pointer hover:bg-blue-200">Confirm</button>
+          <button class="delete border-inherit rounded-sm mt-1 h-8 font-bold bg-gray-100 cursor-pointer  hover:bg-gray-300">Delete</button>
+        </div>
+        
+      </div>
+
+      <div class="see_all box3 flex flex-row border-inherit rounded-sm h-[40px] justify-center items-center ml-1 mr-1 bg-blue-100 hover:bg-blue-200">
+          <p class="border-inherit rounded-sm mt-1 h-8 text-xl font-bold text-blue-700">See all</p>
+      </div>
+
+    </div>
+  </body>
+  <script>
+    document.querySelector(".see_all").addEventListener("click", function () {
+        alert("Bạn ơi bạn đừng vội cho rằng việc bạn nổi tiếng, có ngoại hình điển trai, học vấn xuất sắc, gia đình giàu có hay là người của công chúng sẽ khiến mọi người thực sự muốn kết bạn với bạn. Những điều đó không đồng nghĩa với việc bạn có những mối quan hệ trong sạch. Có thể xung quanh bạn có rất nhiều người tỏ ra quan tâm, ngưỡng mộ, nhưng điều đó chỉ là bề nổi của tảng băng chìm. Họ không thực sự coi bạn là một người bạn đúng nghĩa đâu.")
+    })
+
+    const accepted = document.querySelectorAll(".delete");
+    accepted.forEach(child => {
+        child.addEventListener("click", function () {
+            const parent = child.parentElement;
+            parent.remove();
+        })
+    })
+</script>
+</html>
